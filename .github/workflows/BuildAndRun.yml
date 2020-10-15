@@ -19,5 +19,5 @@ jobs:
     - name: Build with dotnet
       run: dotnet build alertToCare
     - name: Run unit tests
-      run: dotnet test alertToCare --no-build --configuration Release
+      run: dotnet test 
     
