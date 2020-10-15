@@ -26,7 +26,10 @@ namespace alertToCare
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            //services.AddSingleton<alertToCare.Service.IIcuConfigurationService, alertToCare.ServiceImpl.ConfigurationImpl>();
+            services.AddSingleton<alertToCare.Service.IOccupancyService, alertToCare.ServiceImpl.OccupancyServiceImpl>();
             services.AddSingleton<alertToCare.Service.IIcuConfigurationService, alertToCare.ServiceImpl.ConfigurationImpl>();
+            services.AddSingleton<alertToCare.Service.IMonitorService, alertToCare.ServiceImpl.MonitorServiceImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
